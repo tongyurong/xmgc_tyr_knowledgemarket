@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="personconter.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/qiao.js"></script>
+    <script src="select.js"></script>
+    <script src="myjs/apply.js"></script>
+    <style >
+    </style>
+</head>
+<body style="background-color: #c5c5c5">
+<script>
+    $(function() {
+        $('#apply_success p').click(function(){
+            window.history.go(-2)
+        });
+    });
+    //返回上一页
+</script>
+<div  class="push_alert">请认真阅读各项协议内容</div>
+    <div style="color: white;width: 80%;margin-left: 10%;margin-top:6%;background-color: #0a77d5;height:350px;overflow: scroll" >
+        <div style="margin-left: 2%">
+        <h2 >用户注册协议</h2>
+        <h5> 第1条 本站服务条款的确认和接纳</h5>
+        <p><strong>1.4</strong>保留在中华人民共和国大陆地区法施行之法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消订单的权利。</p>
+        <h5> 第2条 本站服务</h5>
+        <p><strong>2.1</strong>通过互联网依法为用户提供互联网信息等服务，用户在完全同意本协议及本站规定的情况下，方有权使用本站的相关服务。</p>
+        <h5> 第3条 用户信息</h5>
+        <p><strong>3.1</strong>用户应自行诚信向本站提供注册资料
+        <p><strong>3.5</strong><strong>用户不得将在本站注册获得的账户借给他人使用</strong></p>
+        <p><strong>3.6</strong><strong>用户同意，有权使用用户的注册信息、用户名、密码等信息，登录进入用户的注册账户，进行证据保全，包括但不限于公证、见证等。</strong></p>
+        <h5> 第4条 用户依法言行义务</h5>
+        <p> 本协议依据国家相关法律法规规章制定，用户同意严格遵守以下义务：</p>
+        <p><strong>（1）</strong>不得传输或发表：煽动抗拒、破坏宪法和法律、行政法规实施的言论
+        </p>
+        <h5> 第9条 责任限制及不承诺担保</h5>
+        <p><strong>除非另有明确的书面说明,本站及其所包含的或以其它方式通过本站提供给您的全部信息</strong>
+        </p>
+        </div>
+    </div>
+    <p id="xieyi_back">同意并继续申请</p>
+<script>
+    $('#xieyi_back').click(function(){
+        window.history.back();
+    })
+</script>
+</body>
+</html>

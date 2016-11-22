@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="personconter.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js"></script>
+    <script src="idangerous.swiper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="myjs/seller_center.js"></script>
+    <script>
+        $(function(){
+            $('#course_info').hover(function(){
+                $('#course_info_detail').fadeIn('slow');
+                $('#course_info_name').hide()
+            },function(){
+                $('#course_info_detail').hide();
+                $('#course_info_name').fadeIn()
+            })
+            $("#nav").load("nav.html");
+        })
+    </script>
+</head>
+<body>
+<div id="nav" class="hidden-xs"></div>
+<div id="person_header" class="container-fluid" style="margin-top:4% ;">
+    <div id="person_info">
+        <div id="protailurl"><img src="images/033.jpg" alt="" style="width:100%;height:100%;border-radius: 50%"/></div>
+        <div id="personname"><span>你好</span><span id="UserName"></span>
+            <a href="my_info.html" style="text-decoration: none;color: red" id="num">消息<span class="badge" id="information"></span></a><a id="renum"></a></div>
+    </div>
+    <p style="position: absolute;bottom: 8%;right:10%;"><a href="person_center.html">个人中心</a></p>
+</div>
+<div class="mytabs">
+    <a href="#home" data-toggle="tab"><p class="person_mycourse" >我的商品</p></a>
+    <a href="#profile" data-toggle="tab" ><p class="person_mycourse">待审核的课程</p></a>
+    <a href="push.html"><p class="person_push_course">上传课程</p></a>
+</div>
+
+<!-----------------------------------------菜单部分结束------------------------------------------------------------->
+<div class="tab-content">
+    <!---------------------------------------我的商品----------------------------------------------------------->
+    <div class="tab-pane active" id="home" style="width: 80%;float: left">
+
+            <div id="course_info" class="course_info">
+                <img id="myimg" src="videopicture/jQuery1.jpg" width="100%"  style="box-shadow: 5px 5px 5px gray" height="174">
+                <p  id="course_info_name" class="course_info_name">Java基础</p>
+                <div  id="course_info_detail" class="course_info_detail">
+                    <p>上传时间：<span id="coursetime">2016/9/9</span></p>
+                    <p id="buyperson">购买人数：<span id="courseperson">55</span></p><p id="rebuyperson"></p>
+                </div>
+            </div>
+           <div id="recourse_info"></div>
+        <h2 id="nocourse"  style="margin-left:10%;margin-top: 10%">还没有正在出售的课程！快去上传课程吧！</h2>
+        <div id="fuzhi_course_info"></div>
+    </div>
+
+    <!----------------------------------------待审核的课程-------------------------------------------------------------->
+    <div class="tab-pane" id="profile" style="width: 80%;float: left">
+
+            <div id="applysellcourse" style="width: 31% ;margin-left: 1.5%;margin-top: 1%;float: left;position: relative">
+                <img id="mying1" src="videopicture/nodejs.jpg" width="100%"  height="174" style="box-shadow: 5px 5px 5px gray">
+                <p style="position: absolute;top:60px;height:60px;width: 100%;text-align:center;
+                background-color: rgba(14, 14, 14, 0.86);color: white;box-shadow: 0px 0px 10px white"><span id="applycoursename">HTML+CSS基础全解</span><br>
+                    <span style="font-size: 18px;color: red">审核中请耐心等待</span></p>
+            </div>
+            <div id="reapplysellcourse"></div>
+        <h2 id="noapplycourse"  style="margin-left:10%;margin-top: 10%">没有待审核课程！</h2>
+
+    </div>
+
+<script>
+    $(function(){
+        $('.course_info').hover(function(){
+            $(this).children('div.course_info_detail').fadeIn('slow');
+            $(this).children('p.course_info_name').hide();
+        },function(){
+            $(this).children('p.course_info_name').fadeIn();
+            $(this).children('div.course_info_detail').hide();
+        })
+
+    })
+</script>
+</div>
+
+<!-- 底部菜单 -->
+<div id="bottom" class="visible-xs"></div>
+<!-- 页脚 -->
+<div style="clear: both"></div>
+<div class="container-fluid" id="get_footer" style="margin-top: 20%">
+</div>
+<script>
+   $("#get_footer").load("footer.html");
+</script>
+</body>
+</html>

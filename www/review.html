@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="personconter.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/qiao.js"></script>
+    <!--<script src="myjs/select.js"></script>-->
+    <script src="myjs/review.js"></script>
+    <style >
+body{background-color: #919191
+}
+    </style>
+</head>
+<body>
+<div style="width: 100%;height: 1024px;background-color: #b8b8b8;position: relative" id="reveiw_box">
+    <div class="panel panel-default" style="width: 60%;top:15%;left: 20% ;position: absolute;">
+        <div class="panel-heading" style="color: gray" id="pl">请在下方输入您的评论</div>
+        <div class="panel-body">
+            <textarea rows="5" cols="90" maxlength="150" style="color: gray" id="textpl" >可输入150个汉字</textarea><br>
+            <button type="submit" class="btn btn-default" id="submit">提交</button>
+            <button type="button" class="btn btn-default" id="quxiao" onclick="quxiao()"> 取消</button>
+        </div>
+    </div>
+<script>
+    $(function(){
+        $("#textpl").focus(function(){
+            $(this).text("");
+        });
+        $("#submit").click(function(){
+            var val = $('#textpl').val();
+            if(val=="" || val == null)
+           qiao.bs.alert({title:"警告",msg:"内容不能为空"});
+            else {
+                window.location.href="review_success.html";
+                 }
+            });
+
+        });
+    function quxiao(){
+    window.history.go(-1)
+}
+</script>
+</div>
+</body>
+</html>

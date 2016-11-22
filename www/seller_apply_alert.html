@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="personconter.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/qiao.js"></script>
+    <script src="select.js"></script>
+    <script src="myjs/apply.js"></script>
+</head>
+<body>
+<script>
+    $(function() {
+        $('#apply_success p').click(function(){
+            window.history.go(-2)
+        });
+    });
+    //返回上一页
+</script>
+<div id="apply_success">
+    <h2>抱歉！您还未申请成为本网站课程卖家！</h2>
+    <p class="xieyi_back" style="width:15%;height:50px;text-align: center;line-height:50px;font-size: 20px;
+    background-color: #ff1948;;border-radius: 5px;;margin-left:25%; cursor:pointer;float: left"><a href="apply.html"style="text-decoration: none;color: white">取消</a></p>
+    <p class="xieyi_back" style="width:15%;height:50px;text-align: center;line-height:50px;font-size: 20px;color:white;
+    background-color: #ff1948;;border-radius: 5px;;margin-left:2%; cursor:pointer;float: left" id="back_to" >立刻申请</p>
+</div>
+<script>
+    $('#back_to').click(function(){
+        window.history.back();
+    })
+</script>
+</body>
+</html>
